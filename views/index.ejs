@@ -1,0 +1,37 @@
+  <!-- Mostrar los posts aquí -->
+
+
+<%- include('partials/header') %>
+<h1><%= title %></h1>
+
+<div class="container">
+    <div class="row mt-5">
+        <h1 class="text-center border-bottom">Lista de Posts</h1>
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Descripción</th>
+                        <th>Autor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% posts.forEach(post => { %>
+                        <tr>
+                            <td><%= post.id %></td>
+                            <td><%= post.title %></td>
+                            <td><%= post.description %></td>
+                            <td><%= post.author %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
+
+
